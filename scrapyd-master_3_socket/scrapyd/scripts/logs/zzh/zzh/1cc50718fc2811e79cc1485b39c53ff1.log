@@ -1,0 +1,74 @@
+2018-01-18 03:18:08 [scrapy.utils.log] INFO: Scrapy 1.3.3 started (bot: zzh)
+2018-01-18 03:18:08 [scrapy.utils.log] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'zzh.spiders', 'DUPEFILTER_CLASS': 'zzh.scrapy_redis.dupefilter.RFPDupeFilter', 'SPIDER_MODULES': ['zzh.spiders'], 'BOT_NAME': 'zzh', 'SCHEDULER': 'zzh.scrapy_redis.scheduler.Scheduler', 'LOG_FILE': 'logs/zzh/zzh/1cc50718fc2811e79cc1485b39c53ff1.log', 'HTTPCACHE_STORAGE': 'scrapy_splash.SplashAwareFSCacheStorage'}
+2018-01-18 03:18:08 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2018-01-18 03:18:08 [zzh] INFO: Reading start URLs from redis key 'start_urls' (batch size: 16)
+2018-01-18 03:18:08 [py.warnings] WARNING: /usr/lib/python2.7/site-packages/scrapy/utils/deprecate.py:156: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.useragent.UserAgentMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2018-01-18 03:18:08 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'zzh.middlewares.RandomUserAgentMiddware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy_splash.SplashCookiesMiddleware',
+ 'scrapy_splash.SplashMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-01-18 03:18:08 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-01-18 03:18:08 [scrapy.middleware] INFO: Enabled item pipelines:
+['zzh.pipelines.mongodb.MongoPipeline']
+2018-01-18 03:18:08 [scrapy.core.engine] INFO: Spider opened
+2018-01-18 03:18:08 [zzh] DEBUG: Resuming crawl (1 requests scheduled)
+2018-01-18 03:18:08 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-01-18 03:18:08 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2018-01-18 03:18:08 [twisted] ERROR: Unhandled Error
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/scrapy/commands/crawl.py", line 58, in run
+    self.crawler_process.start()
+  File "/usr/lib/python2.7/site-packages/scrapy/crawler.py", line 280, in start
+    reactor.run(installSignalHandlers=False)  # blocking call
+  File "/usr/lib64/python2.7/site-packages/twisted/internet/base.py", line 1192, in run
+    self.mainLoop()
+  File "/usr/lib64/python2.7/site-packages/twisted/internet/base.py", line 1201, in mainLoop
+    self.runUntilCurrent()
+--- <exception caught here> ---
+  File "/usr/lib64/python2.7/site-packages/twisted/internet/base.py", line 824, in runUntilCurrent
+    call.func(*call.args, **call.kw)
+  File "/usr/lib/python2.7/site-packages/scrapy/utils/reactor.py", line 41, in __call__
+    return self._func(*self._a, **self._kw)
+  File "/usr/lib/python2.7/site-packages/scrapy/core/engine.py", line 123, in _next_request
+    if not self._next_request_from_scheduler(spider):
+  File "/usr/lib/python2.7/site-packages/scrapy/core/engine.py", line 150, in _next_request_from_scheduler
+    request = slot.scheduler.next_request()
+  File "build/bdist.linux-x86_64/egg/zzh/scrapy_redis/scheduler.py", line 156, in next_request
+    
+  File "build/bdist.linux-x86_64/egg/zzh/scrapy_redis/queue.py", line 115, in pop
+    
+  File "build/bdist.linux-x86_64/egg/zzh/scrapy_redis/picklecompat.py", line 10, in loads
+    
+exceptions.TypeError: must be string, not list
+
+2018-01-18 03:19:08 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-01-18 03:19:54 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2018-01-18 03:19:54 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2018-01-18 03:19:54 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'finish_reason': 'shutdown',
+ 'finish_time': datetime.datetime(2018, 1, 18, 8, 19, 54, 85024),
+ 'log_count/DEBUG': 2,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 10,
+ 'log_count/WARNING': 1,
+ 'start_time': datetime.datetime(2018, 1, 18, 8, 18, 8, 303960)}
+2018-01-18 03:19:54 [scrapy.core.engine] INFO: Spider closed (shutdown)

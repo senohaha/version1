@@ -1,0 +1,252 @@
+scheduler/enqueued/redis:33
+scheduler/dequeued/redis:33
+file_status_count/downloaded:24
+log_count/INFO:8
+downloader/response_count:55
+downloader/response_bytes:9711981
+finish_reason:finished
+splash/render.html/response_count/200:2
+log_count/DEBUG:110
+log_count/WARNING:1
+request_depth_max:1
+start_time:17-06-29 02:57:38
+splash/render.html/request_count:2
+downloader/request_method_count/GET:53
+downloader/request_bytes:19377
+downloader/response_status_count/200:55
+response_received_count:55
+finish_time:17-06-29 02:58:00
+item_scraped_count:29
+file_count:24
+downloader/request_count:55
+downloader/request_method_count/POST:2
+
+log_count/DEBUG:2
+memusage/startup:49750016
+log_count/INFO:11
+log_count/WARNING:1
+finish_time:17-12-01 12:22:26
+finish_reason:shutdown
+start_time:17-12-01 12:20:53
+log_count/ERROR:1
+memusage/max:50003968
+
+log_count/DEBUG:2
+memusage/startup:53215232
+log_count/INFO:11
+log_count/WARNING:1
+finish_time:17-12-01 12:30:23
+finish_reason:shutdown
+start_time:17-12-01 12:26:25
+log_count/ERROR:1
+memusage/max:60715008
+
+retry/count:2
+memusage/startup:49500160
+httperror/response_ignored_status_count/503:1
+scheduler/enqueued/redis:4
+scheduler/dequeued/redis:4
+retry/reason_count/503 Service Unavailable:2
+log_count/INFO:12
+downloader/response_count:3
+downloader/response_bytes:345
+downloader/response_status_count/503:3
+splash/render.html/response_count/503:3
+log_count/DEBUG:6
+log_count/WARNING:1
+start_time:17-12-01 12:31:17
+splash/render.html/request_count:1
+memusage/max:50184192
+downloader/request_bytes:1992
+response_received_count:1
+finish_time:17-12-01 12:33:05
+downloader/request_method_count/POST:3
+retry/max_reached:1
+finish_reason:shutdown
+downloader/request_count:3
+httperror/response_ignored_count:1
+
+log_count/DEBUG:3
+memusage/startup:49479680
+log_count/INFO:10
+downloader/response_count:1
+downloader/response_status_count/200:1
+log_count/WARNING:1
+downloader/request_count:1
+spider_exceptions/NotImplementedError:1
+start_time:17-12-01 12:35:16
+splash/render.html/response_count/200:1
+scheduler/enqueued/redis:2
+downloader/response_bytes:21622
+splash/render.html/request_count:1
+response_received_count:1
+log_count/ERROR:1
+finish_reason:shutdown
+downloader/request_bytes:657
+memusage/max:49483776
+scheduler/dequeued/redis:2
+downloader/request_method_count/POST:1
+finish_time:17-12-01 12:35:47
+
+log_count/DEBUG:3
+memusage/startup:49561600
+log_count/INFO:12
+downloader/response_count:1
+downloader/response_status_count/200:1
+log_count/WARNING:1
+downloader/response_bytes:6326
+spider_exceptions/NotImplementedError:1
+start_time:17-12-01 12:37:07
+scheduler/enqueued/redis:1
+finish_time:17-12-01 12:39:51
+downloader/request_count:1
+response_received_count:1
+log_count/ERROR:1
+downloader/request_method_count/GET:1
+downloader/request_bytes:304
+memusage/max:50532352
+scheduler/dequeued/redis:1
+finish_reason:shutdown
+
+log_count/DEBUG:3
+memusage/startup:49463296
+log_count/INFO:11
+downloader/response_count:1
+downloader/response_status_count/200:1
+log_count/WARNING:1
+downloader/request_count:1
+finish_reason:shutdown
+start_time:17-12-01 12:40:06
+splash/render.html/response_count/200:1
+scheduler/enqueued/redis:2
+downloader/response_bytes:22692
+splash/render.html/request_count:1
+response_received_count:1
+downloader/request_bytes:664
+memusage/max:51294208
+scheduler/dequeued/redis:2
+downloader/request_method_count/POST:1
+finish_time:17-12-01 12:41:32
+
+log_count/DEBUG:3
+memusage/startup:49475584
+log_count/INFO:12
+downloader/response_count:1
+downloader/response_status_count/200:1
+log_count/WARNING:1
+downloader/request_count:1
+finish_reason:shutdown
+start_time:17-12-01 12:41:46
+splash/render.html/response_count/200:1
+scheduler/enqueued/redis:2
+downloader/response_bytes:22692
+splash/render.html/request_count:1
+response_received_count:1
+downloader/request_bytes:659
+memusage/max:51281920
+scheduler/dequeued/redis:2
+downloader/request_method_count/POST:1
+finish_time:17-12-01 12:43:48
+
+log_count/DEBUG:3
+memusage/startup:49586176
+log_count/INFO:10
+downloader/response_count:1
+downloader/response_status_count/200:1
+log_count/WARNING:1
+downloader/request_count:1
+finish_reason:shutdown
+start_time:17-12-01 12:46:52
+splash/render.html/response_count/200:1
+scheduler/enqueued/redis:2
+downloader/response_bytes:22692
+splash/render.html/request_count:1
+response_received_count:1
+downloader/request_bytes:657
+memusage/max:49590272
+scheduler/dequeued/redis:2
+downloader/request_method_count/POST:1
+finish_time:17-12-01 12:47:29
+
+log_count/DEBUG:3
+memusage/startup:49496064
+log_count/INFO:10
+downloader/response_count:1
+downloader/response_status_count/200:1
+log_count/WARNING:1
+downloader/request_count:1
+finish_reason:shutdown
+start_time:17-12-01 12:47:37
+splash/render.html/response_count/200:1
+scheduler/enqueued/redis:2
+downloader/response_bytes:22692
+splash/render.html/request_count:1
+response_received_count:1
+downloader/request_bytes:657
+memusage/max:49496064
+scheduler/dequeued/redis:2
+downloader/request_method_count/POST:1
+finish_time:17-12-01 12:47:57
+
+log_count/DEBUG:3
+memusage/startup:53321728
+log_count/INFO:10
+downloader/response_count:1
+downloader/response_status_count/200:1
+log_count/WARNING:1
+downloader/request_count:1
+finish_reason:shutdown
+start_time:17-12-01 12:50:35
+splash/render.html/response_count/200:1
+scheduler/enqueued/redis:2
+downloader/response_bytes:22692
+splash/render.html/request_count:1
+response_received_count:1
+downloader/request_bytes:660
+memusage/max:53321728
+scheduler/dequeued/redis:2
+downloader/request_method_count/POST:1
+finish_time:17-12-01 12:50:58
+
+log_count/DEBUG:3
+memusage/startup:53362688
+log_count/INFO:11
+downloader/response_count:1
+downloader/response_status_count/200:1
+log_count/WARNING:1
+downloader/request_count:1
+finish_reason:shutdown
+start_time:17-12-01 12:54:33
+splash/render.html/response_count/200:1
+scheduler/enqueued/redis:2
+downloader/response_bytes:22692
+splash/render.html/request_count:1
+response_received_count:1
+downloader/request_bytes:657
+memusage/max:61992960
+scheduler/dequeued/redis:2
+downloader/request_method_count/POST:1
+finish_time:17-12-01 12:56:25
+
+log_count/DEBUG:43
+memusage/startup:49590272
+log_count/INFO:11
+downloader/response_count:21
+downloader/response_status_count/200:21
+log_count/WARNING:1
+request_depth_max:1
+downloader/request_count:21
+finish_reason:shutdown
+start_time:17-12-01 12:56:34
+splash/render.html/response_count/200:21
+scheduler/enqueued/redis:42
+downloader/response_bytes:351466
+splash/render.html/request_count:21
+response_received_count:21
+downloader/request_bytes:15851
+item_scraped_count:20
+memusage/max:59265024
+scheduler/dequeued/redis:42
+downloader/request_method_count/POST:21
+finish_time:17-12-01 12:57:46
+
