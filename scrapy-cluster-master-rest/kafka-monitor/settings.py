@@ -1,10 +1,20 @@
+# -*- coding: utf-8 -*-
 # This file houses all default settings for the Kafka Monitor
 # to override please use a custom localsettings.py file
 
 # Redis host information
-REDIS_HOST = 'localhost'
-REDIS_PORT = 6379
-REDIS_DB = 0
+# REDIS_HOST = 'localhost'
+# REDIS_PORT = 6379
+# REDIS_DB = 0
+
+# redis集群
+STARTUP_NODES=[{'host':'192.168.1.115','port':7000},
+                    {'host':'192.168.1.115','port':7001},
+                    {'host':'192.168.1.115','port':7002},
+                    {'host':'192.168.1.160','port':7003},
+                    {'host':'192.168.1.160','port':7004},
+                    {'host':'192.168.1.160','port':7005}
+                   ]
 
 # Kafka server information
 KAFKA_HOSTS = ['localhost:9092']

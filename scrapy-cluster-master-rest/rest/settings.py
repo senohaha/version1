@@ -3,9 +3,17 @@ FLASK_LOGGING_ENABLED = True
 FLASK_PORT = 5343 # Hex representation of 'SC'
 
 # Redis host information
-REDIS_HOST = 'localhost'
-REDIS_PORT = 6379
-REDIS_DB = 0
+# REDIS_HOST = 'localhost'
+# REDIS_PORT = 6379
+# REDIS_DB = 0
+
+STARTUP_NODES=[{'host':'192.168.1.115','port':7000},
+                    {'host':'192.168.1.115','port':7001},
+                    {'host':'192.168.1.115','port':7002},
+                    {'host':'192.168.1.160','port':7003},
+                    {'host':'192.168.1.160','port':7004},
+                    {'host':'192.168.1.160','port':7005}
+                   ]
 
 # Kafka server information ------------
 KAFKA_HOSTS = ['localhost:9092']

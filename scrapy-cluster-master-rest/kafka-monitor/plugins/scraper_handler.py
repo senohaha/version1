@@ -1,7 +1,9 @@
+# -*- coding: utf-8 -*-
 from __future__ import absolute_import
 from .base_handler import BaseHandler
 import tldextract
-import redis
+# import redis
+from rediscluster import RedisCluster
 import sys
 from scrapy.http import Request
 from redis.exceptions import ConnectionError
@@ -18,9 +20,11 @@ class ScraperHandler(BaseHandler):
         Setup redis and tldextract
         '''
         self.extract = tldextract.TLDExtract()
-        self.redis_conn = redis.Redis(host=settings['REDIS_HOST'],
-                                      port=settings['REDIS_PORT'],
-                                      db=settings.get('REDIS_DB'))
+        # redis集群
+        self.redis_conn = RedisCluster(startup_nodes=settings.get('STARTUP_NODES'))
+        # self.redis_conn = redis.Redis(host=settings['REDIS_HOST'],
+        #                               port=settings['REDIS_PORT'],
+        #                               db=settings.get('REDIS_DB'))
 
         try:
             self.redis_conn.info()

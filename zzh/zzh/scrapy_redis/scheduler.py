@@ -5,7 +5,7 @@ import six
 
 from scrapy.utils.misc import load_object
 from scrapy import Request
-from . import connection
+from . import s_connection
 
 
 # TODO: add SCRAPY_JOB support.
@@ -90,7 +90,7 @@ class Scheduler(object):
         if isinstance(kwargs.get('serializer'), six.string_types):
             kwargs['serializer'] = importlib.import_module(kwargs['serializer'])
 
-        server = connection.from_settings(settings)
+        server = s_connection.from_settings(settings)
         # Ensure the connection is working.
         server.ping()
 
@@ -144,7 +144,6 @@ class Scheduler(object):
         self.queue.clear()
 
     def enqueue_request(self, request):
-        print request
         if not request.dont_filter and self.df.request_seen(request):
             self.df.log(request, self.spider)
             return False

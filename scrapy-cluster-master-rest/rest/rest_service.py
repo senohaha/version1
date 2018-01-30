@@ -13,7 +13,8 @@ import time
 import traceback
 import uuid
 import socket
-import redis
+# import redis
+from rediscluster import StrictRedisCluster
 import logging
 import json
 import threading
@@ -350,11 +351,12 @@ class RestService(object):
         """Returns a Redis Client"""
         if not self.closed:
             try:
-                self.logger.debug("Creating redis connection to host " +
-                                  str(self.settings['REDIS_HOST']))
-                self.redis_conn = redis.StrictRedis(host=self.settings['REDIS_HOST'],
-                                              port=self.settings['REDIS_PORT'],
-                                              db=self.settings['REDIS_DB'])
+                # self.logger.debug("Creating redis connection to host " +
+                #                   str(self.settings['REDIS_HOST']))
+                # self.redis_conn = redis.StrictRedis(host=self.settings['REDIS_HOST'],
+                #                               port=self.settings['REDIS_PORT'],
+                #                               db=self.settings['REDIS_DB'])
+                self.redis_conn = StrictRedisCluster(startup_nodes=self.settings['STARTUP_NODES'])
                 self.redis_conn.info()
                 self.redis_connected = True
                 self.logger.info("Successfully connected to redis")

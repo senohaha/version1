@@ -31,7 +31,7 @@ MYSQL_PWD = '123456'
 # MONGODB_HOST = '127.0.183.170'
 MONGODB_HOST = '127.0.0.1'
 MONGODB_PORT = 27017
-MONGODB_DBNAME = 'zzh'
+MONGODB_DBNAME = 'zzhdfy'
 MONGODB_DOCNAME = 'from_scrapy'
 
 # Gridfs数据库配置
@@ -41,7 +41,16 @@ ShardMONGODB_DBNAME = "zzh_file"
 GridFs_Collection = "fs"
 
 # redis数据库配置
-REDIS_URL = 'redis://127.0.0.1:6379/0'
+# REDIS_URL = 'redis://127.0.0.1:6379/0'
+
+# redis集群
+STARTUP_NODES=[{'host':'192.168.1.115','port':7000},
+                    {'host':'192.168.1.115','port':7001},
+                    {'host':'192.168.1.115','port':7002},
+                    {'host':'192.168.1.160','port':7003},
+                    {'host':'192.168.1.160','port':7004},
+                    {'host':'192.168.1.160','port':7005}
+                   ]
 
 
 # 文件存储

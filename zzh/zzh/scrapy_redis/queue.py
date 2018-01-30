@@ -1,7 +1,8 @@
 # -*- coding:utf-8 -*-
 from scrapy.utils.reqser import request_to_dict, request_from_dict
 
-from . import picklecompat
+# from . import picklecompat
+from zzh.scrapy_redis import picklecompat
 
 
 class Base(object):
@@ -106,12 +107,19 @@ class SpiderPriorityQueue(Base):
         timeout not support in this queue class
         """
         # use atomic range/remove using multi/exec
-        pipe = self.server.pipeline()
-        pipe.multi()
-        pipe.zrange(self.key, 0, 0).zremrangebyrank(self.key, 0, 0)
-        results, count = pipe.execute()
-        if results:
-            return picklecompat.loads(results[0])
+
+        # redis-py-cluster不支持事务
+        # pipe = self.server.pipeline()
+        # pipe.multi()
+        # pipe.zrange(self.key, 0, 0).zremrangebyrank(self.key, 0, 0)
+        # results, count = pipe.execute()
+        # if results:
+        #     return picklecompat.loads(results[0])
+        result = self.server.zrange(self.key, 0, 0)
+        self.server.zremrangebyrank(self.key, 0, 0)
+        if result:
+            return picklecompat.loads(result[0])
+
 
 
 class SpiderStack(Base):
